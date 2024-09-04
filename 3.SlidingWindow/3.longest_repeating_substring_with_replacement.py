@@ -13,7 +13,8 @@ Input: s = "XYYX", k = 2
 Output: 4
 """
 
-# Hashmap of count.
+# Hint: Frequency Map and Sliding window
+# Notebook
 
 s = "AABABBA"
 
