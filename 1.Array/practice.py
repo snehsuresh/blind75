@@ -10,24 +10,20 @@ Input: nums = [2,20,4,10,3,4,5]
 Output: 4
 """
 
-# Hint: NUMBER LINE
-
-
-nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]
+nums = [2, 20, 4, 10, 3, 4, 5]
 # expected = 1
-
+nums.sort()
 numSet = set(nums)
-start = False
-output = 0
+maxLen = 1
 for num in numSet:
-    # is it the start of a sequence?
     if len(numSet) == 1:
         print(1)
     if num - 1 in numSet:
         continue
     if num + 1 in numSet:
-        length = 1
-        while num + length in numSet:
-            length += 1
-        output = max(length, output)
-print(output)
+        curlen = 1
+        while (num + curlen) in numSet:
+            curlen += 1
+    maxLen = max(curlen, maxLen)
+
+print(maxLen)

@@ -6,8 +6,8 @@ and you may not use the same element twice.
 You can return the answer in any order.
 """
 
-nums = [2, 7, 11, 2]
-target = 9
+nums = [1, 2, 3, 4]
+target = 3
 
 hMap = {}
 
