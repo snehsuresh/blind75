@@ -17,36 +17,29 @@ Output: "YXAZ"
 s = "aaaaaaaaaaaabbbbbcdd"
 t = "abcdd"
 
-freqMapT = {}
-for i in range(len(t)):
-    freqMapT[t[i]] = freqMapT.get(t[i], 0) + 1
+# Hint: Have = Need
 
-need = len(freqMapT)
-have = 0
-l = 0
-res = []
-# freqMapS = {s[l]:1}
+freqMapT = {}
+for i in t:
+    freqMapT[i] = freqMapT.get(i, 0) + 1
+
 freqMapS = {}
+l = 0
+have = 0
+need = len(freqMapT)
 max_window = ""
-# least_window =
-for r in range(len(s)):
-    if s[r] in freqMapT:
-        freqMapS[s[r]] = freqMapS.get(s[r], 0) + 1
-        if freqMapS[s[r]] == freqMapT[s[r]]:
-            have += 1
-    # validity check
+for r, i in enumerate(s):
+    freqMapS[i] = freqMapS.get(i, 0) + 1
+    if freqMapS[i] == freqMapT[i]:
+        have += 1
     while have == need:
-        curr_window = s[l : r + 1]
-        if len(curr_window) < len(max_window) or max_window == "":
-            max_window = curr_window
+        window = s[l : r + 1]
+        if len(window) < len(max_window) or max_window == "":
+            max_window = window
         if s[l] in freqMapS:
             freqMapS[s[l]] -= 1
             if freqMapS[s[l]] < freqMapT[s[l]]:
                 have -= 1
             if freqMapS[s[l]] == 0:
                 freqMapS.pop(s[l], None)
-
         l += 1
-
-
-print(max_window)

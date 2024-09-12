@@ -24,7 +24,7 @@ while r < len(prices):
     if profit <= 0:
         l = r
         r += 1
-    if profit > 0:
+    else:
         r += 1
     max_prof = max(profit, max_prof)
 print(max_prof)
