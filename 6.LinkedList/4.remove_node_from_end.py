@@ -16,7 +16,6 @@ Input: head = [5], n = 1
 Output: []
 """
 
-
 from typing import Optional
 
 
@@ -29,8 +28,21 @@ class ListNode:
 
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        
-        pass
+        dummy = ListNode(0, head)
+        left = dummy
+        right = head
+
+        # make a gap of n before moving both pointers.  Otherwise it would fail cases where there are only one nodes
+        while n > 0:
+            right = right.next
+            n -= 1
+
+        while right:
+            left = left.next
+            right = right.next
+
+        left.next = left.next.next
+        return dummy.next
 
 
 # Helper function to create a linked list from a list of values
@@ -58,8 +70,8 @@ def print_linked_list(head):
 # Example usage
 if __name__ == "__main__":
     # Example 1
-    input_values1 = [1, 2, 3, 4]
-    n1 = 2
+    input_values1 = [1]
+    n1 = 1
     head1 = create_linked_list(input_values1)
 
     # Print the original linked list

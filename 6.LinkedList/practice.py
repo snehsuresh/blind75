@@ -33,7 +33,6 @@ class Solution:
         # Recursive solution
         if not head:  # if empty linked list
             return None
-
         newHead = head
         if head.next:
             newHead = self.reverseList(head.next)
