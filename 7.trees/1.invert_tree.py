@@ -23,6 +23,7 @@ class TreeNode:
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 
+        # Recursive dfs
         if not root:
             return None
 
