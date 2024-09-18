@@ -25,6 +25,7 @@ class TreeNode:
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        # First step is that you want to go as left deep as possible using a stack
         stack = []
         curr = root
 
