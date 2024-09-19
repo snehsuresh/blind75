@@ -15,7 +15,8 @@ Output: true
 
 """
 
-s = "]"
+# s = "]"
+s = "([{}])"
 
 
 from collections import deque

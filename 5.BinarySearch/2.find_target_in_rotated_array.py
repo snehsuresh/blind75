@@ -24,11 +24,9 @@ Input: nums = [3,5,6,0,1,2], target = 4
 Output: -1
 """
 
-nums = [3, 5, 6, 0, 1, 2]
-0 1 2 3 5 6
-6 0 1 2 3 5
+nums = [4, 5, 6, 1, 2, 3]
 
-target = 4
+target = 3
 start = 0
 end = len(nums) - 1
 

@@ -24,7 +24,7 @@ Input: nums = [4,5,0,1,2,3]
 Output: 0
 """
 
-nums = [4, 5, 6, 7]
+nums = [3, 4, 5, 6, 1, 2]
 start = 0
 end = len(nums) - 1
 curr_min = float("inf")
