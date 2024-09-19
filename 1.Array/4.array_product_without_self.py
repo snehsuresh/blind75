@@ -23,8 +23,8 @@ for i in range(len(nums)):
 
 
 # Pre and Post fix method.
-# nums = [1, 2, 3, 4]
-nums = [-1, 0, 1, 2, 3]
+nums = [2, 3, 4, 5]
+# nums = [-1, 0, 1, 2, 3]
 
 
 def apws(nums):

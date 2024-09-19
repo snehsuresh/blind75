@@ -9,7 +9,7 @@ Input: s = "Was it a car or a cat I saw?"
 Output: true
 """
 
-s = ".,"
+s = "Was it a car or a cat I saw?"
 
 start = 0
 end = len(s) - 1

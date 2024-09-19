@@ -17,7 +17,6 @@ nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]
 # expected = 1
 
 numSet = set(nums)
-start = False
 output = 0
 for num in numSet:
     # is it the start of a sequence?
