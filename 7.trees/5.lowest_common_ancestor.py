@@ -22,14 +22,12 @@ class Solution:
     def lowestCommonAncestor(
         self, root: TreeNode, p: TreeNode, q: TreeNode
     ) -> TreeNode:
-        while True:
-            if p.val < root.val and q.val > root.val:
-                return root.left
-            elif p.val > root.val and q.val > root.val:
-                root = root.right
-            else:  # where the split occurs
-                # if root.val == p.val or root.val ==  q.val:
-                return root
+        if root.val < p.val and root.val < q.val:
+            root = root.right
+        elif root.val > p.val and root.val > q.val:
+            root = root.left
+        else:  # here is where the split occurs
+            return root
 
 
 # Helper function to insert nodes in level-order to create a binary tree from a list

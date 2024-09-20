@@ -19,7 +19,7 @@ class TreeNode:
 
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        # Write your solution here
+        # Recursive dfs
         if not p and not q:
             return True
         if p and q and p.val == q.val:
