@@ -1,3 +1,26 @@
+"""
+Given a binary tree root, return the level order traversal of it as a nested list, 
+where each sublist contains the values of nodes at a particular level in the tree, from left to right.
+
+Example 1:
+
+
+
+Input: root = [1,2,3,4,5,6,7]
+
+Output: [[1],[2,3],[4,5,6,7]]
+Example 2:
+
+Input: root = [1]
+
+Output: [[1]]
+Example 3:
+
+Input: root = []
+
+Output: []
+"""
+
 from typing import List, Optional
 from collections import deque
 
@@ -16,7 +39,6 @@ class Solution:
         res = []
         if root:
             q.append(root)
-        val = []
         while q:
             val = []
             for i in range(len(q)):

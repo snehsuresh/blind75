@@ -27,6 +27,7 @@ class TreeNode:
 
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        # Iterative BFS
         q = deque()
         res = []
         if root:

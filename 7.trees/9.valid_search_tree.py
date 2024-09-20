@@ -46,9 +46,9 @@ class Solution:
                 return
             if not (lowest < node.val < highest):
                 return False
-            return dfs(node.left, lowest, node.val) and dfs(
-                node.right, node.val, highest
-            )
+            valid_left = dfs(node.left, lowest, node.val)
+            valid_right = dfs(node.right, node.val, highest)
+            return valid_left and valid_right
 
         return dfs(root, float("-inf"), float("inf"))
 
