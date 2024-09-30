@@ -60,10 +60,10 @@ class MedianFinder:
 
     def findMedian(self) -> float:
         if len(self.small_nums) > len(self.large_nums):
-            return -1 * self.small[0]
-        elif len(self.large) > len(self.small):
-            return self.large[0]
-        return (-1 * self.small[0] + self.large[0]) / 2.0
+            return -1 * self.small_nums[0]
+        elif len(self.large_nums) > len(self.small_nums):
+            return self.large_nums[0]
+        return (-1 * self.small_nums[0] + self.large_nums[0]) / 2.0
 
 
 # Example usage

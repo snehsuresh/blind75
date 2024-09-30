@@ -42,6 +42,25 @@ class Solution:
         return res
 
 
+"""
+dfs(0) -> subset = []
+    dfs(1) -> subset = [1]
+        dfs(2) -> subset = [1, 2]
+            dfs(3) -> subset = [1, 2, 3] -> res.append([1, 2, 3])
+            dfs(3) -> subset = [1, 2] -> res.append([1, 2])
+        dfs(2) -> subset = [1]
+            dfs(3) -> subset = [1, 3] -> res.append([1, 3])
+            dfs(3) -> subset = [1] -> res.append([1])
+    dfs(1) -> subset = []
+        dfs(2) -> subset = [2]
+            dfs(3) -> subset = [2, 3] -> res.append([2, 3])
+            dfs(3) -> subset = [2] -> res.append([2])
+        dfs(2) -> subset = []
+            dfs(3) -> subset = [3] -> res.append([3])
+            dfs(3) -> subset = [] -> res.append([])
+"""
+
+
 # Example usage
 if __name__ == "__main__":
     solution = Solution()
