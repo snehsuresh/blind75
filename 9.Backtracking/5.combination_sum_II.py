@@ -38,23 +38,24 @@ from typing import List
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        res = []
         candidates.sort()
+        res = []
+        curr = []
 
-        def dfs(i, curr, total):
+        def dfs(i, total):
             if i >= len(candidates) or total > target:
                 return
             if target == total:
                 res.append(curr.copy())
                 return
             curr.append(candidates[i])
-            dfs(i + 1, curr, total + candidates[i])
+            dfs(i + 1, total + candidates[i])
             curr.pop()
             while i + 1 < len(candidates) and candidates[i] == candidates[i + 1]:
                 i += 1
-            dfs(i + 1, curr, total)
+            dfs(i + 1, total)
 
-        dfs(0, [], 0)
+        dfs(0, 0)
         return res
 
 

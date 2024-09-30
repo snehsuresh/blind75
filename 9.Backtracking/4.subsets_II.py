@@ -54,7 +54,7 @@ class Solution:
 
 
 """
-Call Stack Trace:
+Call Stack Trace: [1,2,1]
 backtrack(0, [])
 backtrack(1, [1])
 backtrack(2, [1, 1])

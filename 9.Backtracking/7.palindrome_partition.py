@@ -1,6 +1,7 @@
 """
 Palindrome Partitioning
-Given a string s, split s into substrings where every substring is a palindrome. Return all possible lists of palindromic substrings.
+Given a string s, split s into substrings where every substring is a palindrome. 
+Return all possible lists of palindromic substrings.
 
 You may return the solution in any order.
 
@@ -17,6 +18,7 @@ Output: [["a"]]
 """
 
 from typing import List
+
 
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
@@ -41,6 +43,7 @@ class Solution:
                 return False
             l, r = l + 1, r - 1
         return True
+
 
 """
 
