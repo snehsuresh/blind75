@@ -50,7 +50,7 @@ for row in range(9):
         if (
             board[row][col] in rows_dict[row]
             or board[row][col] in cols_dict[col]
-            or board[row][col] in squares_dict[(row, col)]
+            or board[row][col] in squares_dict[(row // 3, col // 3)]
         ):
             print(False)
         rows_dict[row].add(board[row][col])
